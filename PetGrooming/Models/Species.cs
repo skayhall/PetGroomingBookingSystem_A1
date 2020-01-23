@@ -14,7 +14,6 @@ namespace PetGrooming.Models
 
         [Key]
         public int SpeciesID { get; set; }
-
         public string Name { get; set; }
         public string Breed { get; set; }
 
