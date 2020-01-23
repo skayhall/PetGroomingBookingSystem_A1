@@ -11,28 +11,18 @@ namespace PetGrooming.Models
 {
     public class Pet
     {
-        /*
-            A pet is an animal that receives the grooming that the owner pays for
-            Some things that describe a pet:
-                - Name
-                - Weight
-                - Species
-                - Color
-                - Special Notes
 
-            A Pet must reference a Species
-        */
         [Key]
         public int PetID { get; set; }
+
         public string PetName { get; set; }
+        //double data types allow for decimal places. (research and describe further)
         public double Weight { get; set; }
         public string Color { get; set; }
         public string Notes { get; set; }
 
-
-
-        //Representing the Many in (One species to Many Pets)
-        
+        //Foreign Key for SpeciesID
+        //Represents the Many - (One species to Many Pets)
         public int SpeciesID { get; set; }
         [ForeignKey("SpeciesID")]
         public virtual Species Species { get; set; }

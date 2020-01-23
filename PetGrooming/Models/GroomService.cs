@@ -10,13 +10,14 @@ namespace PetGrooming.Models
 {
     public class GroomService
     {
-        /*
-            A GroomService is a type of activity that a Groomer can do for a pet. Some examples might be nail clipping, shampoo, trim, etc.
-            
-            Some things that describe a GroomService
-                - Service Name
-                - Cost
-                - Duration
-         */
+
+        [Key]
+        public int ServiceID { get; set; }
+        public string ServiceName { get; set; }
+        public int Cost { get; set; }
+        public int Duration { get; set; }
+
+
+
     }
 }
